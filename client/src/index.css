@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ethara-bg text-gray-300 font-sans min-h-screen antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-100;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full px-3 py-2 bg-ethara-input border border-ethara-border rounded-md shadow-sm text-gray-200 focus:outline-none focus:ring-1 focus:ring-ethara-primary focus:border-ethara-primary sm:text-sm;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors;
+  }
+  .btn-primary {
+    @apply text-white bg-ethara-primary hover:bg-ethara-primaryHover focus:ring-ethara-primary;
+  }
+  .btn-danger {
+    @apply text-white bg-red-500 hover:bg-red-600 focus:ring-red-500;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-gray-300 border border-ethara-border hover:bg-ethara-card focus:ring-gray-500;
+  }
+  
+  .card {
+    @apply bg-ethara-card overflow-hidden rounded-xl border border-ethara-border;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2 py-1 rounded text-xs font-bold tracking-wide uppercase;
+  }
+}
